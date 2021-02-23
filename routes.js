@@ -1,14 +1,9 @@
+const homeController = require('./controllers/home.controller');
 
 const Routes = (app) => {
-
-    app.get('/', (req, res, next) => {
-        const option = {
-            nome: 'Liniker'
-        }
-
-        res.render('home', option)
-    })
-
+ 
+    app.get('/', homeController.index);
+    
 }
 
 module.exports = Routes
